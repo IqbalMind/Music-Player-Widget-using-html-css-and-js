@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Music Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="player">
+        <div class="player__header">
+            <div class="player__img player__img--absolute slider">
+                <button class="player__button player__button--absolute--nw playlist">
+                    <img src="http://physical-authority.surge.sh/imgs/icon/playlist.svg" alt="playlist-icon">
+                </button>
+                <button class="player__button player__button--absolute--center play">
+                    <img src="http://physical-authority.surge.sh/imgs/icon/play.svg" alt="play-icon">
+                    <img src="http://physical-authority.surge.sh/imgs/icon/pause.svg" alt="pause-icon">
+                </button>
+                <div class="slider__content">
+                    <img class="img slider__img" src="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/286/100x100/make-me-move-feat-karra-1586948717-dTsA9So1cu.jpg" alt="cover">
+                    <img class="img slider__img" src="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/451/100x100/imagine-1586953710-4wJybAsS8x.jpg" alt="cover">
+                    <img class="img slider__img" src="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/434/100x100/linked-1586953317-0BranYHgw8.jpg" alt="cover">
+                    <img class="img slider__img" src="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/487/100x100/why-do-i-feat-bri-tolani-1586954592-AkIU1vSG9q.jpg" alt="cover">
+                    <img class="img slider__img" src="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/137/100x100/invincible-1586946874-ZUsn5ZwSWh.jpg" alt="cover">
+                    <img class="img slider__img" src="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/143/100x100/heroes-tonight-feat-johnning-1586946923-LsvZKuKHRf.jpg" alt="cover">
+                    <img class="img slider__img" src="https://linkstorage.linkfire.com/medialinks/images/7268dbaf-880f-4b40-aafe-0d45e278fe47/artwork-440x440.jpg" alt="cover">
+                </div>
+            </div>
+            <div class="player__controls">
+                <button class="player__button back">
+                    <img class="img" src="http://physical-authority.surge.sh/imgs/icon/back.svg" alt="back-icon">
+                </button>
+                <p class="player__context slider__context">
+                    <strong class="slider__name"></strong>
+                    <span class="player__title slider__title"></span>
+                </p>
+                <button class="player__button next">
+                    <img class="img" src="http://physical-authority.surge.sh/imgs/icon/next.svg" alt="next-icon">
+                </button>
+                <div class="progres">
+                    <div class="progres__filled"></div>
+                </div>
+            </div>
+        </div>
+        <ul class="player__playlist list">
+            <li class="player__song">
+                <img class="player__img img" src="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/286/100x100/make-me-move-feat-karra-1586948717-dTsA9So1cu.jpg" alt="Make Me Move (feat. KARRA)" title="Make Me Move (feat. KARRA)">
+                <p class="player__context">
+                    <b class="player__song-name">Make Me Move (feat. KARRA)</b>
+                    <span class="flex">
+                        <span class="player__title">Culture Code, KARRA</span>
+                        <span class="player__song-time"></span>
+                    </span>
+                </p>
+                <audio class="audio" src="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/286/make-me-move-feat-karra-1586948725-C9SPOA3UZn.mp3"></audio>
+            </li>
+            <li class="player__song">
+                <img class="player__img img" src="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/451/100x100/imagine-1586953710-4wJybAsS8x.jpg" alt="cover">
+                <p class="player__context">
+                    <b class="player__song-name">Imagine</b>
+                    <span class="flex">
+                        <span class="player__title">Jim Yosef</span>
+                        <span class="player__song-time"></span>
+                    </span>
+                </p>
+                <audio class="audio" src="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/451/imagine-1586953712-PjfTAsj2s7.mp3"></audio>
+            </li>
+            <li class="player__song">
+                <img class="player__img img" src="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/434/100x100/linked-1586953317-0BranYHgw8.jpg" alt="cover">
+                <p class="player__context">
+                    <b class="player__song-name">Linked</b>
+                    <span class="flex">
+                        <span class="player__title">Jim Yosef, Anna Yvette</span>
+                        <span class="player__song-time"></span>
+                    </span>
+                </p>
+                <audio class="audio" src="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/434/linked-1586953319-v8FLkcjqgO.mp3"></audio>
+            </li>
+            <li class="player__song">
+                <img class="player__img img" src="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/487/100x100/why-do-i-feat-bri-tolani-1586954592-AkIU1vSG9q.jpg" alt="cover">
+                <p class="player__context">
+                    <b class="player__song-name">Why Do I? (feat. Bri Tolani)</b>
+                    <span class="flex">
+                        <span class="player__title">Unknown Brain, Bri Tolani</span>
+                        <span class="player__song-time"></span>
+                    </span>
+                </p>
+                <audio class="audio" src="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/487/why-do-i-feat-bri-tolani-1586954600-5IMWlSMhuc.mp3"></audio>
+            </li>
+            <li class="player__song">
+                <img class="player__img img" src="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/137/100x100/invincible-1586946874-ZUsn5ZwSWh.jpg" alt="cover">
+                <p class="player__context ">
+                    <b class="player__song-name">Invincible</b>
+                    <span class="flex">
+                        <span class="player__title">DEAF KEV</span>
+                        <span class="player__song-time"></span>
+                    </span>
+                </p>
+                <audio class="audio" src="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/137/invincible-1586946876-v3qvV3TEKb.mp3"></audio>
+            </li>
+            <li class="player__song">
+                <img class="player__img img" src="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/143/100x100/heroes-tonight-feat-johnning-1586946923-LsvZKuKHRf.jpg" alt="cover">
+                <p class="player__context">
+                    <b class="player__song-name">Heroes Tonight (feat. Johnning)</b>
+                    <span class="flex">
+                        <span class="player__title">Janji, Johnning</span>
+                        <span class="player__song-time"></span>
+                    </span>
+                </p>
+                <audio class="audio" src="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/143/heroes-tonight-feat-johnning-1586946924-fcppiBJp7z.mp3"></audio>
+            </li>
+            <li class="player__song">
+                <img class="player__img img" src="https://linkstorage.linkfire.com/medialinks/images/7268dbaf-880f-4b40-aafe-0d45e278fe47/artwork-440x440.jpg" alt="cover">
+                <p class="player__context ">
+                    <b class="player__song-name">Collide</b>
+                    <span class="flex">
+                        <span class="player__title">Elektronomia</span>
+                        <span class="player__song-time"></span>
+                    </span>
+                </p>
+                <audio class="audio" src="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/081/collide-1643284836-kJ42U7PzET.mp3"></audio>
+            </li>
+        </ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
