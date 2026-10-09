@@ -13,6 +13,8 @@ Designing Music Player Widget only use Html, Css, and Javascript
 - Pure CSS without Library or Framework
 
 
+### Demo
+[codepen.io/iqbalmind/pen/jOYNzQR](https://codepen.io/iqbalmind/pen/jOYNzQR)
+
 ### Video Demo
 [Coming Soon]
-
