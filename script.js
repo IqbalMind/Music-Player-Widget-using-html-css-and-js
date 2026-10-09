@@ -46,9 +46,8 @@ function closePlayer() {
 }
 
 function next(index) {
-    count = index || count;
+    count = index !== undefined ? index : count;
     if (count == sliderContentLength) {
-        count = count;
         return;
     }
     left = (count + 1) * sliderWidth;
@@ -59,9 +58,8 @@ function next(index) {
 }
 
 function back(index) {
-    count = index || count;
+    count = index !== undefined ? index : count;
     if (count == 0) {
-        count = count;
         return;
     }
     left = (count - 1) * sliderWidth;
@@ -92,7 +90,9 @@ function changeSliderContext() {
 }
 
 function changeBgBody() {
-    body.style.backgroundColor = bgBody[count];
+    const imgUrl = playerPlayList[count].querySelector(".player__img").src;
+    body.style.backgroundImage = `url(${imgUrl})`;
+    body.style.backgroundColor = 'transparent'; // Fallback
 }
 
 function selectSong() {
@@ -158,6 +158,7 @@ function durationSongs() {
 
 
 changeSliderContext();
+changeBgBody();
 
 // add events
 sliderContext.addEventListener("click", openPlayer);
@@ -165,11 +166,11 @@ sliderContext.addEventListener("animationend", () => sliderContext.style.animati
 playlistButton.addEventListener("click", closePlayer);
 
 nextButton.addEventListener("click", () => {
-    next(0)
+    next();
 });
 
 backButton.addEventListener("click", () => {
-    back(0)
+    back();
 });
 
 playButton.addEventListener("click", () => {
@@ -212,4 +213,19 @@ playerPlayList.forEach((item, index) => {
             return;
         }
     });    
+});
+
+// Keyboard accessibility
+document.addEventListener("keydown", (e) => {
+    if (e.code === "Space") {
+        e.preventDefault(); // Prevent scrolling
+        isPlay = true;
+        playSong();
+    } else if (e.code === "ArrowRight") {
+        e.preventDefault();
+        next();
+    } else if (e.code === "ArrowLeft") {
+        e.preventDefault();
+        back();
+    }
 });
